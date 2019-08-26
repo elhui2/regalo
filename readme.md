@@ -23,7 +23,7 @@ Cambios en Carrito:
 [TERMINADO]Quitar mensaje de cupón
 
 [PENDIENTE]Cambiar Billing Details por Tus Datos
-[PENDIENTE]Solo dejar en el formulario:
+[TERMINADO]Solo dejar en el formulario:
 -Nombre 
 -Apellido
 -Empresa (Opcional)
@@ -50,7 +50,7 @@ Sección HOME:
 -Pewter
 
 [TERMINADO] Quitar las entradas de blog del home.
-[PENDIENTE] Para el footer solamente dejar:
+[TERMINADO] Para el footer solamente dejar:
 -Nosotros
 -Blog
 -Tienda
@@ -74,11 +74,11 @@ SECCIÓN BLOG:
 
 SECCIÓN NOSOTROS:
 
-[PENDIENTE] Usar este Template: https://qedqod.com/demo/deux/homedecor/about-us/
-[PENDIENTE] Usar imagen que te voy a mandar
+[TERMINADO] Usar este Template: https://qedqod.com/demo/deux/homedecor/about-us/
+[TERMINADO] Usar imagen que te voy a mandar
 
 
-[PENDIENTE] Quitar el Nosotros que está en el cuerpo del texto y agregar el siguiente texto:
+[TERMINADO] Quitar el Nosotros que está en el cuerpo del texto y agregar el siguiente texto:
 
 Nuestra Empresa
 
@@ -113,5 +113,5 @@ Todos los que formamos parte de esta empresa trabajamos día a día para poner e
 
 SECCIÓN CONTACTO:
 [TERMINADO]Cambiar imagen de stage por la que te voy a enviar. 
-[PENDIENTE]Cambiar teléfono de contacto:+52 5527547726
-[PENDIENTE]Quitar casilla de asunto del formulario
+[TERMINADO]Cambiar teléfono de contacto:+52 5527547726
+[TERMINADO]Quitar casilla de asunto del formulario
