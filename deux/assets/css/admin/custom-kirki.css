@@ -1,0 +1,40 @@
+#accordion-panel-theme_options {
+    margin: 15px 0;
+}
+
+#accordion-panel-theme_options .accordion-section-title::before {
+    content: "\f111"; /* default */
+    margin-right: 8px;
+    margin-top: 1px;
+    display: inline-block;
+    color: #aaa;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+    transition: color .1s ease-in 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.customize-subtitle {
+    display: block;
+    text-align: center;
+    margin: 15px -30px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323232;
+    background: #fff;
+}

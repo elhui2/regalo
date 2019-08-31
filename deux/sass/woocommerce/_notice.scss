@@ -1,0 +1,43 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	padding: 20px 20px 20px 80px !important;
+	margin: 20px 0 !important;
+	border: none;
+
+	&:before {
+		display: none;
+	}
+
+	.box-content .button {
+		@extend .line-hover;
+		color: $color__primary;
+		line-height: 1.6;
+		min-width: 0;
+		height: auto;
+		background-color: transparent;
+		float: none;
+		margin-left: 10px;
+
+		&:after {
+			bottom: 0;
+		}
+
+		&:hover {
+			color: $color__primary;
+			background-color: transparent;
+		}
+	}
+}
+
+.woocommerce-error {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.woocommerce-message {
+
+}

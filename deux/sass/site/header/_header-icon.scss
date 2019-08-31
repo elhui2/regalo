@@ -1,0 +1,303 @@
+.header-icon {
+	text-align: right;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.menu-item-account img{
+			border-radius: 100%;
+		}
+
+		&.menu-item-cart,
+		&.menu-item-wishlist {
+			position: relative;
+			padding-right: 25px;
+
+			span.count {
+				@include counter();
+			}
+		}
+
+		&.menu-item-cart svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.shopping-cart-icon {
+		display: inline-block;
+		position: relative;
+
+		img {
+			transition: opacity 0.5s;
+			opacity: 1;
+		}
+
+		.icon-light {
+			position: absolute;
+			opacity: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&.header-icon-left {
+		text-align: left;
+	}
+
+	.header-v6 & {
+		float: right;
+		.lang-cur-switcher{
+			float:left;
+		}
+		.list-dropdown{
+			margin: 5px 20px 0 0;
+			@include font-size(1.2);
+			color: $color__primary;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			ul li{
+				padding: 10px;
+				margin: 0;
+				display: block;
+				text-align: center;
+
+				a{
+					width: auto;
+					height: auto;
+					margin: 0;
+				}
+			}
+			ul{
+			    transform: translateY(40px);
+			    box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+			    background-color: #fff;
+				&:before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 40px;
+					position: absolute;
+					top: -40px;
+				}
+			}
+		}
+		&.header-icon-left{
+			ul{
+				float:left;
+			}
+		}
+	}
+
+	.header-text-light & {
+		svg {
+			fill: $color__light;
+			stroke: $color__light;
+			transition: all 0.5s;
+		}
+
+		li.menu-item-cart,
+		li.menu-item-wishlist ,
+		.menu-item-mobile-cart {
+			span.count {
+				color:$color__primary;
+				background-color: $color__light;
+			}
+		}
+
+		.shopping-cart-icon {
+			.icon-dark {
+				opacity: 0;
+			}
+
+			.icon-light {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.toggle-nav {
+	color: $color__dark;
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin: 5px 20px 0 0;
+	vertical-align: top;
+	&.menu-text{
+		width: auto;
+		margin: 5px 50px 0 0;
+		@include font-size(1.2);
+		color: $color__primary;
+		font-weight: 600;
+		text-transform: uppercase;
+
+	}
+	.icon-burger {
+		position: absolute;
+		border-bottom: 2px solid;
+		top: 50%;
+		left: 0;
+		width: 25px;
+		height: 2px;
+		margin-top: -1px;
+		transition: 0.5s;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -6px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			border-bottom: 2px solid;
+			transition: transform 0.5s;
+			width: 25px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			border-bottom: 2px solid;
+			transition: transform 0.5s;
+			width: 14px;
+		}
+	}
+
+	&.active {
+		.icon-burger {
+			transform: rotate(45deg);
+			width: 14px;
+
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				transform: rotate(90deg);
+				top: 0;
+			}
+		}
+	}
+}
+
+.menu-item-mobile-cart, .menu-item-mobile-wishlist {
+	position: relative;
+	display: inline-block;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.count {
+	    color: #fff;
+	    line-height: 15px;
+	    display: inline-block;
+	    border-radius: 50%;
+	    width: 8px;
+	    height: 8px;
+	    position: absolute;
+	    margin-top: -13px;
+	    background-color: $color__primary;
+	    transition: all 0.8s;
+	    top:50%;
+		right: auto;
+		left: -3px;
+		transform: translateX(-50%);
+		// Blink
+		animation: counter-blink .5s infinite linear;
+		-webkit-animation: counter-blink .5s infinite linear;
+	}
+
+	.cart_empty, .wishlist_empty {
+		display: none;
+	}
+}
+
+@-webkit-keyframes counter-blink{
+	0% {
+		opacity:1
+	}
+	50% {
+		opacity:.5
+	}
+	100% {
+		opacity:1
+	}
+}
+
+@keyframes counter-blink{
+	0%{
+		opacity:1
+	}
+	50% {
+		opacity:.5
+	}
+	100% {
+		opacity:1
+	}
+}
+
+.counter-blink-me{
+	-webkit-animation-name:counter-blink;
+	animation-name:counter-blink;
+	-webkit-animation-duration:.5s;
+	animation-duration:.5s;
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite
+}
+
+@-webkit-keyframes counter-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(224, 14, 44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(224, 14, 44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(224, 14, 44, 0);
+  }
+}
+@keyframes counter-pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(224, 14, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(224, 14, 44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(224, 14, 44, 0);
+      box-shadow: 0 0 0 10px rgba(224, 14, 44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(224, 14, 44, 0);
+      box-shadow: 0 0 0 0 rgba(224, 14, 44, 0);
+  }
+}
+
+.counter-pulse-me{
+	box-shadow: 0 0 0 rgba(224, 14, 44, 0.4);
+	animation: counter-pulse 3s ease-in-out 5s;
+	-webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}

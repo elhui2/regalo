@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'ArcaMajora';
+	src: url('assets/fonts/ArcaMajora3-Bold.eot');
+	src: url('assets/fonts/ArcaMajora3-Bold.eot?#iefix') format('embedded-opentype'),
+	url('assets/fonts/ArcaMajora3-Bold.woff2') format('woff2'),
+	url('assets/fonts/ArcaMajora3-Bold.woff') format('woff'),
+	url('assets/fonts/ArcaMajora3-Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	@include font-size(1.4);
+	font-family: $font__main;
+	line-height: $font__line-height-body;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+@import "headings";
+
+@import "copy";

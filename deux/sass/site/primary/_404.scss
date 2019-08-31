@@ -1,0 +1,130 @@
+body.error404 {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.site-header {
+		border-bottom: 0;
+	}
+
+	.site-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.footer-instagram{
+		bottom: 0px;
+	}
+	.footer-info:before {
+		display: none;
+	}
+}
+
+.error-404 {
+	text-align: center;
+	padding: 0;
+	margin: 200px auto;
+
+	.page-header {
+		padding: 0;
+		background: none;
+		position: relative;
+
+		&:before{
+		    content: "404";
+		    position: absolute;
+		    top: -20px;
+		    left: 50%;
+		    color: #f5f5f5;
+		    font-size: 340px;
+		    line-height: 300px;
+		    font-weight: 700;
+		    transform: translateX(-50%);
+		    -webkit-transform: translateX(-50%);
+
+		    @media screen and (max-width: 767px) {
+				font-size: 220px;
+			}
+		}
+	}
+
+	.page-header .page-title {
+		@include font-size(7);
+		line-height: 1;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 100px 0;
+		position: relative;
+	}
+
+	.page-content {
+		@include font-size(1.8);
+		color: $color__primary;
+		font-weight: 500;
+		margin: 0;
+		padding-bottom: 60px;
+	}
+
+	.page-search {
+		padding-bottom: 50px;
+
+		.search-form {
+			width: 400px;
+			padding-bottom: 5px;
+			margin: 0 auto;
+			position: relative;
+
+			label {
+				margin-bottom: 0;
+				width: 100%;
+			}
+			.search-field {
+				@include font-size(1.4);
+				font-weight: 400;
+				color: $color__dark;
+				border: none;
+				outline: 0;
+				width: 100%;
+				padding-right: 35px;
+				border: 2px solid $color__border;
+				background-color: $color__border;
+				&:focus {
+					border-color: $color__secondary;
+				}
+			}
+
+			::-webkit-input-placeholder {
+				@include font-size(1.4);
+				font-weight: 400;
+				color: $color__dark;
+			}
+
+			.search-submit {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -18px;
+				z-index: 999;
+				width: 35px;
+				height: 35px;
+				opacity: 0;
+			}
+			svg {
+				position: absolute;
+				right: 20px;
+				top: 48%;
+				margin-top: -10px;
+				stroke: $color__dark;
+				fill: $color__dark;
+			}
+
+			input:focus{
+				border-color: $color__primary;
+
+				& ~ svg{
+					stroke: $color__primary;
+					fill: $color__primary;
+				}
+			}
+		}
+	}
+}

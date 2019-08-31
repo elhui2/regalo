@@ -1,0 +1,52 @@
+a {
+	transition: 0.5s;
+	color: $color__primary;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:visited {
+
+	}
+	
+	&:hover,
+	&:active,
+	&:focus {
+		color: darken(desaturate($color__primary, 3.7001), 2.7451);
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+
+.single-post .post-summary{
+	p a {
+		transition: none;
+	    position: relative;
+	    border-bottom: 1px solid $color__primary;
+	    display: inline-block;
+	}
+
+	p a:after {
+		content: "";
+	    position: absolute;
+	    bottom: -1px;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    width: 0;
+	    border-bottom: 1px solid $color__primary;
+	    -webkit-transition: width ease-out 350ms;
+	    transition: width ease-out 350ms;
+	    -webkit-transition-delay: 50ms;
+	    transition-delay: 50ms;
+	}
+
+	p a:hover {
+		border-color: transparent;
+
+		&:after{
+			width:100%;
+		}
+	}
+	
+}

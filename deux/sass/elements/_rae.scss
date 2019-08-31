@@ -1,0 +1,125 @@
+/* refund and exchange style */
+.woocommerce {
+	// my account order
+	.ced_rnx_wallet {
+		color: inherit;
+	    font-weight: normal;
+	    text-align: left !important;
+	    line-height: 2.14286;
+	    min-width: auto;
+	    display: block;
+	    padding: 20px 0 0;
+	    border-radius: 0px;
+	    background-color: transparent;
+	    cursor: default;
+	    position: relative;
+	    border-top: 1px solid $color__border;
+
+	    &:hover {
+	    	background-color: transparent;
+	    	color: inherit;
+
+	    }
+
+	    b {
+	    	font-weight: normal;
+	    }
+	}
+
+    .regenerate_coupon_code a.button{
+    	padding: 0 30px;
+    	margin-right:20px;
+    }
+
+    // rae page
+    #ced_rnx_return_request_subject_text, 
+    #ced_rnx_exchange_request_subject_text {
+        margin-bottom:20px
+    }
+    
+    #ced_rnx_return_request_form_wrapper{
+    	
+    	h1 {
+    		display: none;
+    	}
+
+    	b {
+    		font-weight:500;
+    	}
+
+    	.ced_rnx_return_note {
+    		font-weight:500;
+    	}
+
+    	.product-quantity {
+    		border-right: 1px solid $color__border;
+    	}
+    	
+    	input[type="radio"],
+    	input[type="checkbox"] {
+    		display: inline-block;
+    		margin-right: 10px;
+    	}
+
+    	input[type="radio"]{
+    		margin-right: 0;
+		    vertical-align: text-top;
+    	}
+    	
+    	input[type="number"]{
+    		margin: 20px auto;
+    		width: auto;
+    		border-radius: 5px;
+    		background: $color__border;
+    		border:none;
+    		text-align: center;
+	    	
+	    	&:focus{
+	    		box-shadow: none;
+	    		border:none;
+	    	}
+    	}
+    	
+    	textarea{
+    		padding: 20px;
+
+    		&:focus{
+    			box-shadow: none;
+	    		border-color:$color__secondary;
+    		}
+    	}
+
+    	label {
+    		border: 0;
+    		margin: 30px 0 10px;
+    	}
+
+    	.ced_rnx_return_request_morefiles{
+    		margin: 30px 0;
+    	}
+
+    }
+
+    // note
+    .ced_rnx_note_tag_wrapper{
+	    .ced-rnx_customer_detail,
+	    .ced_rnx_note_tag_wrapper {
+	    	width: 50%;
+	    	float: left;
+	    	padding-right:20px;
+	    }
+
+	    .ced-rnx_customer_detail{
+	    	padding-right:0;
+	    	padding-left:20px;
+	    }
+	    .select2-container--default .select2-selection--single{
+	    	border:1px solid $color__border;
+	    	padding: 0;
+	    }
+
+	    p {
+	    	margin: 0;
+	    }
+    }
+}
