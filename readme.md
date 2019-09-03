@@ -1,0 +1,5 @@
+- Agregar enlace de tienda en dos sliders
+- Texto faltante en carrito derecho
+- Redes sociales
+- Texto de formulario de contacto
+- Agregar Analytics
